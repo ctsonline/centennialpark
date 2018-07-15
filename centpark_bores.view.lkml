@@ -49,7 +49,7 @@ sql_table_name: centpark_bores ;;
   }
 
   dimension:  location {
-    label: "Meter Location"
+    label: "Bore Location"
     type: string
     sql: split_part(${name}, '.',4 ) ;;
   }
@@ -114,14 +114,14 @@ sql_table_name: centpark_bores ;;
 
 
   measure: min_value{
-    label: "Min Meter Reading"
+    label: "Min Reading"
     type: min
     sql: ${v1} ;;
     value_format: "0.000"
   }
 
   measure: max_value{
-    label: "Max Meter Reading"
+    label: "Max Reading"
     type: max
     sql: ${v1} ;;
     value_format: "0.000"
