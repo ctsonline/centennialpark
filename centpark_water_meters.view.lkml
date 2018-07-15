@@ -115,13 +115,14 @@ view: centpark_water_meters {
 
 
   measure: min_value{
+    label: "Min Meter Reading"
     type: min
     sql: ${v1} ;;
     value_format: "0.000"
   }
 
   measure: max_value{
-    label: "Meter Reading"
+    label: "Max Meter Reading"
     type: max
     sql: ${v1} ;;
     value_format: "0.000"
