@@ -1,15 +1,18 @@
 connection: "ctsdev"
 
 # include all the views
-include: "centpark_water_meters.view"
+include: "*.view"
 
-datagroup: centennial_park_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
-}
+# include all the dashboards
+#include: "*.dashboard"
 
-persist_with: centennial_park_default_datagroup
+
+##persist_with: centennial_park_default_datagroup
 
 explore: centpark_water_meters {
   label: "CentPark Water Meters"
+}
+
+explore: centpark_bores {
+  label: "CentPark bores"
 }
