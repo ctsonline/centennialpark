@@ -9,3 +9,7 @@ datagroup: centennial_park_default_datagroup {
 }
 
 persist_with: centennial_park_default_datagroup
+
+explore: centpark_water_meters {
+  label: "CentPark Water Meters"
+}
