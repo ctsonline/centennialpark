@@ -49,7 +49,7 @@ sql_table_name: centpark_bores ;;
   }
 
   dimension:  location {
-    label: "Bore Location"
+    label: "Lights Location"
     type: string
     sql: split_part(${name}, '.',4 ) ;;
   }

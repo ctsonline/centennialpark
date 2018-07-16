@@ -1,5 +1,5 @@
 view: centpark_lights {
-  sql_table_name: centpark_lights ;;
+  sql_table_name: centpark_bores ;;
 
   dimension: Value{
     label: "Meter Values"
