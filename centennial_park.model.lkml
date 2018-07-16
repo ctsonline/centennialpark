@@ -16,3 +16,7 @@ explore: centpark_water_meters {
 explore: centpark_bores {
   label: "CentPark bores"
 }
+
+explore: centpark_lights {
+  label: "CentPark Lights"
+}
