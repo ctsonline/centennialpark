@@ -20,3 +20,7 @@ explore: centpark_bores {
 explore: centpark_lights {
   label: "CentPark Lights"
 }
+
+explore: cent_park_fm {
+  label: "CentPark FM "
+}
