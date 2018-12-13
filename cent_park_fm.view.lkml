@@ -109,7 +109,7 @@ view: cent_park_fm {
 #   2017.11.14 AD at 13:31:28 AEDT
 
   measure: d1_count {
-    group_label: "Water Meter count"
+    label: "Water Meter count"
     type: sum
     sql: ${d1} ;;
   }
