@@ -109,6 +109,7 @@ view: cent_park_fm {
 #   2017.11.14 AD at 13:31:28 AEDT
 
   measure: d1_count {
+    group_label: "Water Meter count"
     type: sum
     sql: ${d1} ;;
   }
@@ -123,6 +124,7 @@ view: cent_park_fm {
   }
 
   measure: d2_max {
+    label: "Pump Fault"
         type: max
     sql: ${d2} ;;
   }
