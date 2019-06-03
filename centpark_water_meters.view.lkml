@@ -27,6 +27,68 @@ view: centpark_water_meters {
     drill_fields: [t1_hour, t1_time,t1_month,t1_week,t1_year]
   }
 
+  dimension: d1 {
+    group_label: "Digital"
+    type: number
+    sql: ${TABLE}.d1 ;;
+  }
+
+  dimension: d2 {
+    group_label: "Digital"
+    type: number
+    sql: ${TABLE}.d2 ;;
+  }
+
+  dimension: r1 {
+    group_label: "Relays"
+    type: number
+    sql: ${TABLE}.r1 ;;
+  }
+
+  dimension: r2 {
+    group_label: "Relays"
+    type: number
+    sql: ${TABLE}.r2 ;;
+  }
+
+  dimension: r3 {
+    group_label: "Relays"
+    type: number
+    sql: ${TABLE}.r3 ;;
+  }
+
+  dimension: r4 {
+    group_label: "Relays"
+    type: number
+    sql: ${TABLE}.r4 ;;
+  }
+
+
+
+  dimension: client {
+    type: string
+    hidden: no
+    sql: REPLACE(${cid},'11','CoM1') ;;
+  }
+
+  dimension: site_name {
+    type: string
+    hidden: no
+    sql: REPLACE(${sid},'3','Yarra BBQ') ;;
+  }
+
+  dimension_group: time10{
+    type: time
+    timeframes: [minute10]
+    sql:TIMESTAMPTZ(${TABLE}.timestamp) ;;
+  }
+  dimension_group: timestamp {
+    type: time
+    timeframes: [raw, time, time_of_day, date, week, month, hour_of_day, hour, hour3, minute, minute10]
+    sql: TIMESTAMPTZ(${TABLE}.timestamp);;
+    drill_fields: [timestamp_date,timestamp_hour,timestamp_week]
+  }
+
   dimension: name {
     label: "Long Name"
     type: string
