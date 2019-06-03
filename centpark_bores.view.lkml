@@ -64,6 +64,20 @@ sql_table_name: centpark_bores ;;
     sql: split_part(${MWM_decon}, ' ',1) ;;
   }
 
+  dimension: sid {
+    label: "Site ID"
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.sid ;;
+  }
+
+  dimension: cid {
+    label: "Client ID"
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.cid ;;
+  }
+
 
 
 ### FieldUnits.Albert St 1.Meters.ALBE FM.Accumulator
