@@ -85,7 +85,7 @@ view: centpark_water_meters {
   dimension_group: timestamp {
     type: time
     timeframes: [raw, time, time_of_day, date, week, month, hour_of_day, hour, hour3, minute, minute10]
-    sql: TIMESTAMPTZ(${TABLE}.timestamp);;
+    sql: TIMESTAMPTZ(${TABLE}.t1);;
     drill_fields: [timestamp_date,timestamp_hour,timestamp_week]
   }
 
